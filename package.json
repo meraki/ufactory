@@ -1,0 +1,34 @@
+{
+  "name": "ufactory",
+  "version": "0.0.1",
+  "description": "A small library for creating factory objects in Javascript",
+  "main": "factory.js",
+  "scripts": {
+    "compile": "babel -d lib/ src/",
+    "prepublish": "npm run compile",
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meraki/ufactory.git"
+  },
+  "keywords": [
+    "javascript",
+    "factory",
+    "library",
+    "small"
+  ],
+  "author": "Michael Hoisie",
+  "bugs": {
+    "url": "https://github.com/meraki/ufactory/issues"
+  },
+  "homepage": "https://github.com/meraki/ufactory#readme",
+  "devDependencies": {
+    "babel": "^6.3.13",
+    "babel-cli": "^6.3.17",
+    "babel-preset-es2015": "^6.3.13",
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4",
+    "underscore": "^1.8.3"
+  }
+}
