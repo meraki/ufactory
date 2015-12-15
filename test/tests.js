@@ -6,6 +6,7 @@ describe("Factory", function() {
   before(function() {
     Factory.register("point", {x: 12, y: 13});
     Factory.register("3dpoint", {z: 14}, "point");
+    Factory.register("pointseq", {x: Factory.sequence(), y: Factory.sequence()});
   });
 
   describe("register", function() {
@@ -34,7 +35,6 @@ describe("Factory", function() {
 
   describe("sequence", function () {
     it("should support a numberic sequence", function () {
-      Factory.register("pointseq", {x: Factory.sequence(), y: Factory.sequence()});
       var p1 = Factory.create("pointseq");
       var p2 = Factory.create("pointseq");
       expect(p1.x).to.eql(1);
@@ -51,6 +51,15 @@ describe("Factory", function() {
       expect(p1.y).to.eql("1");
       expect(p2.x).to.eql("2");
       expect(p2.y).to.eql("2");
+    });
+  });
+
+  describe("blueprint", function() {
+    it("should support blueprints", function () {
+      Factory.register("line", {p1: Factory.blueprint("pointseq"), p2: Factory.blueprint("pointseq")});
+      var line = Factory.create("line");
+      expect(line.p2.x - line.p1.x).to.eql(1);
+      expect(line.p2.y - line.p1.y).to.eql(1);
     });
   });
 });
