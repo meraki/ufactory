@@ -45,6 +45,25 @@ console.log(p1.x); // prints 1
 console.log(p2.x); // prints 1
 ```
 
+#### Custom types
+
+```js
+function Point() {}
+Factory.register("type", {x: Factory.sequence(), y: Factory.sequence()}, null, Point);
+var p = Factory.create("type");
+console.log(p1.x); // prints 1
+```
+
+#### Deferred attributes
+
+```js
+Factory.register("now", {date: Factory.computed(function() { return Date.now(); } )});
+var n1 = Factory.create("now");
+// wait one second
+var n2 = Factory.create("now");
+console.log(n2.date - n1.date); // should print one, although Javascript timers are known to be imprecise...
+```
+
 #### Blueprints (deferred factories)
 
 ```js
