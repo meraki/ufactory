@@ -2,7 +2,7 @@
   "name": "ufactory",
   "version": "0.0.1",
   "description": "A small library for creating factory objects in Javascript",
-  "main": "factory.js",
+  "main": "lib/factory.js",
   "scripts": {
     "test": "mocha test"
   },
