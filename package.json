@@ -4,8 +4,6 @@
   "description": "A small library for creating factory objects in Javascript",
   "main": "factory.js",
   "scripts": {
-    "compile": "babel -d lib/ src/",
-    "prepublish": "npm run compile",
     "test": "mocha test"
   },
   "repository": {
