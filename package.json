@@ -23,7 +23,6 @@
   "homepage": "https://github.com/meraki/ufactory#readme",
   "devDependencies": {
     "chai": "^3.4.1",
-    "mocha": "^2.3.4",
-    "underscore": "^1.8.3"
+    "mocha": "^2.3.4"
   }
 }
