@@ -1,6 +1,6 @@
 {
   "name": "ufactory",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A small library for creating factory objects in Javascript",
   "main": "lib/factory.js",
   "scripts": {
